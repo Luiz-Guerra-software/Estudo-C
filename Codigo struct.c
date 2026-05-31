@@ -1,33 +1,29 @@
-#include <stdio.h>
-int main() {
-    float n1, n2, media, comparacao, comp;
+#include<stdio.h>
+#include<string.h>
+struct aluno{
+    char nome[250];
     int ra;
-    comparacao = 0;
-    comp = 10;
-    do {
-        printf("\nDigite o RA (0 para sair): ");
-        scanf("%d", &ra);
-        if (ra == 0) {
-            break;
+    float nota[4];
+};
+ typedef struct aluno aluno;
+ int main(){
+    aluno a[5];
+    int i,j;
+    for(i=0;i<5;i++){
+        printf("\nDigite o seu nome:");
+        scanf("%s",a[i].nome);
+        printf("\nDigite o seu Ra:");
+        scanf("%d",&a[i].ra);
+        for(j=0;j<4;j++){
+            printf("\nDigite a nota %d:",j);
+            scanf("%f",&a[i].nota[j]);
         }
-        printf("Digite a sua primeira nota: ");
-        scanf("%f", &n1);
-        printf("Digite a sua segunda nota: ");
-        scanf("%f", &n2);
-        media = (n1 + n2) / 2;
-        if (media > comparacao) {
-            comparacao = media;
+    }
+    for(i=0;i<5;i++){
+        printf("\nNome do aluno %s",a[i].nome);
+        printf("\nNumero do RA:%d",a[i].ra);
+        for(j=0;j<4;j++){
+            printf("\nNota %d:%.2f",i+1,a[i].nota[j]);
         }
-        if (media < comp) {
-            comp = media;
-        }
-        if (media >= 6) {
-            printf("Aprovado\n");
-        } else {
-            printf("Reprovado\n");
-        }
-    } while (ra != 0);
-    printf("\nA maior média é %.2f", comparacao);
-    printf("\nA menor média é %.2f\n", comp);
-    return 0;
+    }
 }
