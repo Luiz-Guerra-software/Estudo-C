@@ -1,24 +1,28 @@
 #include<stdio.h>
 int main(){
-   float lado1,lado2,lado3;
-   printf("\ndigite o valor do primeiro lado:");
-   scanf("%f",&lado1);
-   printf("\ndigite o valor do segundo lado:");
-   scanf("%f",&lado2);
-   printf("\ndigite o valor do terceiro lado:");
-   scanf("%f",&lado3);
-   if(lado1<lado2+lado3 && lado2<lado1+lado3 && lado3<lado1+lado2){
-    printf("\nE um triangulo");
-    if(lado1==lado2 && lado2==lado3){
-        printf("\nE um triangulo equilatero");
-    }else if(lado1==lado2 && lado2!=lado3 || lado2==lado3 && lado3!=lado1 || lado1==lado3 && lado3!=lado2){
-        printf("\nE um triangulo isoceles");
-    }else if(lado1!=lado2 && lado2!=lado3 && lado1!=lado3){
-        printf("\nE um triangulo escaleno");
+    float n1,n2,i,ra,media,comp,aprovado,reprovado,comparacao;
+    comparacao=0;
+    comp=10;
+    i=0;
+    for(i=0;i<10;i++){
+        printf("\nDigite a sua primeira nota:");
+        scanf("%f",&n1);
+        printf("\nDigite a sua segunda nota:");
+        scanf("%f",&n2);
+        media=(n1+n2)/2;
+        if(comparacao<(n1+n2)/2){
+            comparacao=(n1+n2)/2;
+        }if(comp>(n1+n2)/2){
+            comp=(n1+n2)/2;
+        }
+        if(media>=6){
+            printf("\naprovado");
+        }else{
+        printf("\nreprovado");
+        }
     }
-   }else{
-       printf("\nNao e um triangulo!");
-    }return 0;
+    printf("\nA maior media e %f",comparacao);
+    printf("\nA menor media e %f",comp);
 }
 
 
