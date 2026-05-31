@@ -4,15 +4,15 @@ int main() {
     int ra;
     comparacao = 0;
     comp = 10;
-    while (1) {
+    do {
         printf("\nDigite o RA (0 para sair): ");
         scanf("%d", &ra);
         if (ra == 0) {
             break;
         }
-        printf("\nDigite a sua primeira nota: ");
+        printf("Digite a sua primeira nota: ");
         scanf("%f", &n1);
-        printf("\nDigite a sua segunda nota: ");
+        printf("Digite a sua segunda nota: ");
         scanf("%f", &n2);
         media = (n1 + n2) / 2;
         if (media > comparacao) {
@@ -22,13 +22,12 @@ int main() {
             comp = media;
         }
         if (media >= 6) {
-            printf("\naprovado");
+            printf("Aprovado\n");
         } else {
-            printf("\nreprovado");
+            printf("Reprovado\n");
         }
-    }
-    printf("\nA maior média é %.2f", comparacao);
-    printf("\nA menor média é %.2f", comp);
+    } while (ra != 0);
+    printf("\nA maior mÃ©dia Ã© %.2f", comparacao);
+    printf("\nA menor mÃ©dia Ã© %.2f\n", comp);
     return 0;
 }
-
