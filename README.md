@@ -10,7 +10,7 @@ Programas que escrevi enquanto estudo a linguagem C, em ordem de aprendizado. Ca
 | 02 | `02-Codigo Para.c` | Laço `for` |
 | 03 | `03-Codigo enquanto.c` | Laço `while` |
 | 04 | `04-Codigo fazer enquanto.c` | Laço `do-while` |
-| 05 | `05-Codigo matriz.c` | Matrizes feitas com laço 'for' |
+| 05 | `05-Codigo matriz.c` | Matrizes, percorridas com laço `for` duplo (um laço dentro do outro) |
 | 06 | `06-Código struct.c` | Structs |
 | 07 | `07-Codigo with 2 strucy.c` | Programa com duas structs |
 | 08 | `08-Código Funcão.c` | Funções |
